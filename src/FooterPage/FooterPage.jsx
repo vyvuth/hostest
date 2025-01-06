@@ -1,45 +1,47 @@
 import { CiFacebook } from "react-icons/ci";
 import { FaTiktok } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
+
 import "./FooterStyle.scss";
+import { useEffect } from "react";
 function FooterPage() {
   return (
     <>
       <div className=" container-fluid w-100 bg-secondary">
         <div className=" container">
           <div className="row">
-            <div className=" col-lg-2 col-md-12 p-4 ">
+            <div data-aos="zoom-in" className=" col-lg-2 col-md-12 p-4 ">
               <h6 className="text-light fs-2">TV</h6>
               <p className=" text-capitalize fs-5 opacity-75">recommend</p>
               <p className=" text-capitalize fs-5 opacity-75">most popular</p>
               <p className=" text-capitalize fs-5 opacity-75">new video</p>
               <p className=" text-capitalize fs-5 opacity-75">most viewed</p>
             </div>
-            <div className=" col-lg-2 col-md-12 p-4">
+            <div data-aos="zoom-in" className=" col-lg-2 col-md-12 p-4">
               <h6 className="text-light fs-2">FILM</h6>
               <p className=" text-capitalize fs-5 opacity-75">KHMER movie</p>
               <p className=" text-capitalize fs-5 opacity-75">horrior movie</p>
               <p className=" text-capitalize fs-5 opacity-75">love story</p>
               <p className=" text-capitalize fs-5 opacity-75">korea movie</p>
             </div>
-            <div className=" col-lg-2 col-md-12 p-4">
+            <div data-aos="zoom-in" className=" col-lg-2 col-md-12 p-4">
               <h6 className="text-light fs-2">SPORT</h6>
               <p className=" text-capitalize fs-5 opacity-75">live sport</p>
               <p className=" text-capitalize fs-5 opacity-75">live schema</p>
             </div>
-            <div className=" col-lg-2 col-md-12 p-4">
+            <div data-aos="zoom-in" className=" col-lg-2 col-md-12 p-4">
               <h6 className="text-light fs-2">VAIPLAY</h6>
               <p className=" text-capitalize fs-5 opacity-75">kontakt</p>
               <p className=" text-capitalize fs-5 opacity-75">press</p>
               <p className=" text-capitalize fs-5 opacity-75">job</p>
             </div>
-            <div className=" col-lg-2 col-md-12 p-4">
+            <div data-aos="zoom-in" className=" col-lg-2 col-md-12 p-4">
               <h6 className="text-light fs-2">SUPPORT</h6>
               <p className=" text-capitalize fs-5 opacity-75">FAQ</p>
               <p className=" text-capitalize fs-5 opacity-75">support</p>
               <p className=" text-capitalize fs-5 opacity-75">devices</p>
             </div>
-            <div className=" col-lg-2 col-md-12 p-4">
+            <div data-aos="zoom-in" className=" col-lg-2 col-md-12 p-4">
               <h6 className="text-light fs-2">SYSTEM</h6>
               <p className=" text-capitalize fs-5 opacity-75">systemkrav</p>
               <p className=" text-capitalize fs-5 opacity-75">cookies</p>
@@ -70,7 +72,7 @@ function FooterPage() {
               </span>
             </p>
           </div>
-          <div className=" bars col-lg-4 col-md-12 me-5 m-auto align-items-end">
+          <div className=" bars d-none d-lg-block col-lg-4 col-md-12 me-5 m-auto align-items-end">
             <button
               onClick={() =>
                 window.open("https://web.facebook.com/?_rdc=1&_rdr#", "_blank")

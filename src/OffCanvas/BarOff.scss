@@ -9,3 +9,25 @@
     font-size: 14px !important;
   }
 }
+@media (max-width: 800px) {
+  .offcanvas {
+    width: 90% !important;
+    background-color: #f74a95 !important;
+    padding: 10px !important;
+    border-radius: 0px 15px 15px 0px;
+  }
+  .offcanvas-header {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 120px) {
+  .offcanvas {
+    width: 90% !important;
+    background-color: #f74a95 !important;
+    padding: 10px !important;
+    border-radius: 0px 15px 15px 0px;
+  }
+  .offcanvas-header {
+    font-size: 14px !important;
+  }
+}
