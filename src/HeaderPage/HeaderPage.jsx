@@ -11,7 +11,7 @@ function HeaderPage() {
   const { night, NightMode, DayMode } = useContext(AppProviders);
 
   return (
-    <div>
+    <>
       <nav
         className={`container-fluid d-flex justify-content-between  ${
           night ? "bg-dark text-light " : "bg-secondary text-warning "
@@ -77,7 +77,7 @@ function HeaderPage() {
           <OffCanvas className="animate__animated animate__lightSpeedInRight" />
         </div>
       </nav>
-    </div>
+    </>
   );
 }
 

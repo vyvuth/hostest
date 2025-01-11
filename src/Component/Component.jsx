@@ -7,7 +7,7 @@ import "animate.css";
 
 function Component() {
   const { night } = useContext(AppProviders);
-  let { images } = useContext(AppProviders);
+  let { images, slide } = useContext(AppProviders);
 
   useEffect(() => {
     AOS.init({
@@ -32,16 +32,26 @@ function Component() {
       >
         <div className="carousel-inner animate__animated animate__zoomIn">
           {/* Example slide with AOS animation */}
-          <div
-            style={{ width: "100%", height: "100vh" }}
-            className="carousel-item active mt-4"
-          >
-            <img
-              src="/public/KH IMAGES/KH1.png"
-              className="d-block w-100 h-100 object-fit-cover rounded rounded-3"
-              alt="Slide 1"
-            />
-          </div>
+          {slide.length > 0 ? (
+            slide.map((e, i) => {
+              return (
+                <div
+                  key={i}
+                  style={{ width: "100%", height: "70vh" }}
+                  className={`carousel-item ${i === 0 ? "active" : ""} mt-4`}
+                >
+                  <img
+                    src={e.image}
+                    className="d-block w-100 h-100 object-fit-cover rounded rounded-3"
+                    alt={`Slide ${i + 1}`}
+                  />
+                </div>
+              );
+            })
+          ) : (
+            <p>No slides available</p>
+          )}
+
           {/* Repeat for other slides */}
         </div>
         <button

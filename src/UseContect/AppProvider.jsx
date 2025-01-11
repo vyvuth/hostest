@@ -13,6 +13,7 @@ export const AppProvider = ({ children }) => {
   const DayMode = () => {
     setNight(false);
   };
+  // Slide scrolling
   const [images, setImage] = useState([]);
   const FetchAPI = async () => {
     try {
@@ -32,9 +33,29 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     FetchAPI();
   }, []);
+  // Carousel automatically run
+  const [slide, setSlide] = useState([]);
+  const FetchAPIS = async () => {
+    try {
+      const res = await fetch("https://json-movie-api.onrender.com/movie", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      console.log(data);
+      setSlide(data);
+    } catch (e) {
+      console.error("'Message: ", e);
+    }
+  };
+  useEffect(() => {
+    FetchAPIS();
+  }, []);
 
   return (
-    <AppProviders.Provider value={{ night, NightMode, DayMode, images }}>
+    <AppProviders.Provider value={{ night, NightMode, DayMode, images, slide }}>
       {children}
     </AppProviders.Provider>
   );
