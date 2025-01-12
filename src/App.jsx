@@ -1,3 +1,4 @@
+import BottomBar from "./BottomBar/BottomBar";
 import Component from "./Component/Component";
 import FooterPage from "./FooterPage/FooterPage";
 import HeaderPage from "./HeaderPage/HeaderPage";
@@ -20,9 +21,11 @@ function App() {
         <main>
           <Component />
         </main>
+
         <footer>
           <FooterPage />
         </footer>
+        <BottomBar />
       </AppProvider>
     </div>
   );

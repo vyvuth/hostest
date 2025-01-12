@@ -49,7 +49,7 @@ function Component() {
               );
             })
           ) : (
-            <p>No slides available</p>
+            <p>slides loading....</p>
           )}
 
           {/* Repeat for other slides */}
